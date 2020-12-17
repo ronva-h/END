@@ -355,3 +355,53 @@ def max_freq_char(test_str):
             all_freq[i] = 1
     res = max(all_freq, key = all_freq.get) 
     return res
+
+
+# write a function to find the minimum, or least occuring character in a string
+def min_freq_char(test_str):
+    all_freq = {} 
+    for i in test_str: 
+        if i in all_freq: 
+            all_freq[i] += 1
+        else: 
+            all_freq[i] = 1
+    res = min(all_freq, key = all_freq.get) 
+    return res
+
+
+# write a function to find the minimum occuring character in a string
+from collections import Counter 
+def min_freq_char(test_str):
+    res = Counter(test_str) 
+    res = min(res, key = res.get)  
+    return res
+
+
+# write a program that removes duplicates from a list
+my_list = [1, 2, 3, 1, 2, 4, 5, 4 ,6, 2]
+temp_list = []
+for i in my_list:
+    if i not in temp_list:
+        temp_list.append(i)
+my_list = temp_list
+print("List After removing duplicates ", my_list)
+
+
+# write a program that removes duplicates from a list
+from collections import OrderedDict
+my_list = [1, 2, 3, 1, 2, 4, 5, 4 ,6, 2]
+my_final_list = OrderedDict.fromkeys(my_list)
+print(list(my_final_list))
+
+
+# write a program that removes duplicates from a list
+my_list = [1,2,2,3,1,4,5,1,2,6]
+my_finallist = []
+[my_finallist.append(n) for n in my_list if n not in my_finallist] 
+print(my_finallist)
+
+
+# write a program that removes duplicates from a list
+my_list = [1,2,2,3,1,4,5,1,2,6]
+my_finallist = [i for j, i in enumerate(my_list) if i not in my_list[:j]] 
+print(list(my_finallist))
