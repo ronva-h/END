@@ -405,3 +405,36 @@ print(my_finallist)
 my_list = [1,2,2,3,1,4,5,1,2,6]
 my_finallist = [i for j, i in enumerate(my_list) if i not in my_list[:j]] 
 print(list(my_finallist))
+
+
+# write a program to print even numbers less than 20
+for i in range(0, 20, 2):
+    print(i, end =" ")
+
+
+# write a program to print even numbers less than 20
+for i in range(0, 20):
+    if i % 2 == 0:
+        print(i, end =" ")
+
+
+# create a class 'Person', with data attributes name and age
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+
+# program to iterate over words of a string
+test_string = "TSAI has courses in AI"
+res = test_string.split()  
+for i in res: 
+    print(i) 
+
+
+# write a program to iterate over words of a string
+import re  
+test_string = "TSAI has courses in AI"
+res = re.findall(r'\w+', test_string)  
+for i in res: 
+    print(i) 
