@@ -438,3 +438,85 @@ test_string = "TSAI has courses in AI"
 res = re.findall(r'\w+', test_string)  
 for i in res: 
     print(i) 
+
+
+# write a function that performs binary/bisection search
+def binary_search(arr, low, high, x): 
+    if high >= low: 
+        mid = (high + low) // 2
+        if arr[mid] == x: 
+            return mid 
+        elif arr[mid] > x: 
+            return binary_search(arr, low, mid - 1, x) 
+        else: 
+            return binary_search(arr, mid + 1, high, x) 
+    else: 
+        return -1
+
+
+# write a function that performs bisection search on a list
+def bisection_search(arr, x): 
+    low = 0
+    high = len(arr) - 1
+    mid = 0  
+    while low <= high:   
+        mid = (high + low) // 2
+        if arr[mid] < x: 
+            low = mid + 1  
+        elif arr[mid] > x: 
+            high = mid - 1  
+        else: 
+            return mid   
+    return -1
+
+
+# write a function to perform linear search on a list
+def linear_search(arr, x): 
+    for i in range(len(arr)): 
+        if arr[i] == x: 
+            return i 
+    return -1
+
+
+# write a function that removes i'th index of a string
+def remove(string, i):  
+    a = string[ : i]  
+    b = string[i + 1: ]   
+    return a + b 
+
+
+# write a function that removes i'th index of a string
+def remove(string, i):  
+    for j in range(len(string)): 
+        if j == i: 
+            string = string.replace(string[i], "", 1) 
+    return string 
+
+
+# write a function to compute the sum of all values in a dictionary
+def dict_values_sum(myDict): 
+    sum = 0
+    for i in myDict: 
+        sum = sum + myDict[i] 
+    return sum
+
+
+# write a function to compute the sum of all values in a dictionary
+def dict_values_sum(dict): 
+     sum = 0
+     for i in dict.values(): 
+           sum = sum + i 
+     return sum
+
+
+# write a function to compute the sum of all values in a dictionary
+def dict_values_sum(dict): 
+     sum = 0
+     for i in myDict: 
+           sum = sum + dict[i] 
+     return sum
+
+
+# write a program to compute the sum of all values in a dictionary
+aDict = {'a': 100, 'b':200, 'c':300}
+print("Sum of values :", sum(aDict.values()))
