@@ -569,3 +569,34 @@ def fibonacci (n):
    for i in range (2,n+1): 
        arr[i] = arr[i-1] + arr[i-2] 
    return arr[n] 
+
+
+# write a function to compute squares of first n numbers, starting from 1
+def squaresum(n) : 
+    sm = 0
+    for i in range(1, n+1) : 
+        sm = sm + (i * i)  
+    return sm 
+
+
+# write a function to compute squares of first n numbers, starting from 1
+def squaresum(n) : 
+    return (n * (n + 1) * (2 * n + 1)) // 6
+
+
+# write a function to compute cube of first n numbers, starting from 1
+def cubesum(n): 
+    sum = 0
+    for i in range(1, n+1): 
+        sum +=i*i*i  
+    return sum
+
+
+# write a function to compute cubes of first n natural numbers
+def cubesum(n): 
+    x = 0
+    if n % 2 == 0 :  
+        x = (n/2) * (n+1) 
+    else: 
+        x = ((n + 1) / 2) * n 
+    return (int)(x * x) 
