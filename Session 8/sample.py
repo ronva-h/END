@@ -36,14 +36,14 @@ print(total)
 # write a program to print sum of first 6 numbers, starting from 1
 total = 0
 for i in range(6):
-	total += i+1
+    total += i+1
 print(total)
 
 
 # write a program to print sum of first 6 numbers, starting from 1
 total = 0
 for i in range(1,7):
-	total += i
+    total += i
 print(total)
 
 
@@ -51,7 +51,7 @@ print(total)
 n = 10
 total = 0
 for i in range(1, n+1):
-	total += i
+    total += i
 print(total)
 
 
@@ -61,7 +61,7 @@ string = "Hello World"
 
 # write a function that returns the string "Hello World"
 def hello_world():
-	return "Hello World"
+    return "Hello World"
 
 
 # create a list of integers from 1 to 10
@@ -74,18 +74,18 @@ list_of_ints = list(range(1,11))
 
 # write a function that returns the sum of first 'n' numbers, starting from 1
 def sum(n):
-	total = 0
-	for i in range(n):
-		total += i+1
-	return total
+    total = 0
+    for i in range(n):
+        total += i+1
+    return total
 
 
 # write a function which returns the sum of first 'n' numbers, starting from 1
 def sum_n(n):
-	total = 0
-	for i in range(1, n+1):
-		total += i
-	return total
+    total = 0
+    for i in range(1, n+1):
+        total += i
+    return total
 
 
 # write a program to demonstrate string slicing
@@ -96,7 +96,7 @@ print(b[:5])
 
 # write a function which accepts a string and checks if it is empty
 def check_empty(string):
-	return string == ''
+    return string == ''
 
 
 # Write a program that counts up the number of vowels contained in the string s.
@@ -150,23 +150,23 @@ print('Longest substring in alphabetical order is: ', lng)
 
 # Write a function which computes the sum of elements in a list
 def sumList(aList):
-	total = 0
-	for element in aList:
-		total += element
-	return total
+    total = 0
+    for element in aList:
+        total += element
+    return total
 
 
 # Write a function which computes the sum of elements in a list
 def sumList(aList):
-	total = 0
-	for i in range(len(aList)):
-		total += aList[i]
-	return total
+    total = 0
+    for i in range(len(aList)):
+        total += aList[i]
+    return total
 
 
 # Write a function which computes the sum of elements in a list
 def sumList(aList):
-	return sum(aList)
+    return sum(aList)
 
 
 # Write a function which computes the sum of elements in a list
@@ -309,8 +309,7 @@ print(d)
 def countOccurences(string, word): 
     a = string.split(" ") 
     count = 0
-    for i in range(0, len(a)): 
-          
+    for i in range(0, len(a)):   
         if (word == a[i]): 
            count = count + 1
              
@@ -329,3 +328,30 @@ test_str = "Hahaha"
 rem_char = "h"
 res = test_str.replace(rem_char, "")
 print("The string after character deletion : " + str(res)) 
+
+
+# write a Function to reverse words of string
+def rev_sentence(sentence):  
+    words = sentence.split(' ')  
+    reverse_sentence = ' '.join(reversed(words))  
+    return reverse_sentence 
+
+
+# write a function to find the maximum occuring character in a string
+from collections import Counter 
+def max_freq_char(test_str):
+    res = Counter(test_str) 
+    res = max(res, key = res.get)  
+    return res
+
+
+# write a function to find the maximum occuring character in a string
+def max_freq_char(test_str):
+    all_freq = {} 
+    for i in test_str: 
+        if i in all_freq: 
+            all_freq[i] += 1
+        else: 
+            all_freq[i] = 1
+    res = max(all_freq, key = all_freq.get) 
+    return res
