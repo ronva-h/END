@@ -55,6 +55,23 @@ for i in range(1, n+1):
 print(total)
 
 
+# create a string "Hello World"
+string = "Hello World"
+
+
+# write a function that returns the string "Hello World"
+def hello_world():
+	return "Hello World"
+
+
+# create a list of integers from 1 to 10
+list_of_ints = [1,2,3,4,5,6,7,8,9,10]
+
+
+# create a list of integers from 1 to 10
+list_of_ints = list(range(1,11))
+
+
 # write a function that returns the sum of first 'n' numbers, starting from 1
 def sum(n):
 	total = 0
@@ -198,4 +215,70 @@ def palin(mystr):
         return True
     else:
         return (mystr[0] == mystr[-1]) and palin(mystr[1:-1])
+
+
+# write a python function which swaps the first and last elements of a list passed
+def swapList(newList): 
+    size = len(newList) 
+    temp = newList[0] 
+    newList[0] = newList[size - 1] 
+    newList[size - 1] = temp 
+    return newList 
+
+
+# write a python function which swaps the first and last elements of the list passed
+def swapList(newList): 
+    newList[0], newList[-1] = newList[-1], newList[0] 
+    return newList 
+
+
+# write a function to swap first and last element of a list
+def swapList(list): 
+    get = list[-1], list[0] 
+    list[0], list[-1] = get 
+    return list
+
+
+# write a function to swap first and last element of a list
+def swapList(list): 
+    start, *middle, end = list
+    list = [end, *middle, start] 
+    return list
+
+# Write a python function which swaps the first and last elements of the list passed
+def swapList(list):   
+    first = list.pop(0)    
+    last = list.pop(-1) 
+    list.insert(0, last)   
+    list.append(first)    
+    return list
+
+
+# write a python program to print odd numbers in a list
+list1 = [10, 21, 4, 45, 66, 93] 
+for num in list1: 
+    if num % 2 != 0: 
+       print(num, end = " ")
+
+
+# write a python program to print odd numbers in a list
+list1 = [10, 21, 4, 45, 66, 93] 
+i = 0
+while(i < len(list1)): 
+    if list1[i] % 2 != 0: 
+        print(list1[i], end = " ") 
+    i += 1
+
+
+# write a python program to print odd numbers in a list
+list1 = [10, 21, 4, 45, 66, 93]   
+only_odd = [num for num in list1 if num % 2 == 1]   
+print(only_odd) 
+
+
+# write a python program to print odd numbers in a list
+list1 = [10, 21, 4, 45, 66, 93, 11]  
+odd_nos = list(filter(lambda x: (x % 2 != 0), list1)) 
+print("Odd numbers in the list: ", odd_nos)
+
 
