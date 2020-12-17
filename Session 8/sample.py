@@ -245,6 +245,7 @@ def swapList(list):
     list = [end, *middle, start] 
     return list
 
+
 # Write a python function which swaps the first and last elements of the list passed
 def swapList(list):   
     first = list.pop(0)    
@@ -282,3 +283,49 @@ odd_nos = list(filter(lambda x: (x % 2 != 0), list1))
 print("Odd numbers in the list: ", odd_nos)
 
 
+# write a function to count the occurences of an element in a list
+def countX(lst, x): 
+    count = 0
+    for ele in lst: 
+        if (ele == x): 
+            count = count + 1
+    return count 
+
+
+# write a function to count the occurences of an element in a list
+def countX(lst, x): 
+    return lst.count(x) 
+
+
+# write a program to count the occurences of an element in a list
+from collections import Counter 
+l = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5] 
+x = 3
+d = Counter(l)
+print(d)
+
+
+# write Python function to count the number of occurrence of a word in the given string given string
+def countOccurences(string, word): 
+    a = string.split(" ") 
+    count = 0
+    for i in range(0, len(a)): 
+          
+        if (word == a[i]): 
+           count = count + 1
+             
+    return count 
+
+
+# write a prorgram to delete all occurences of a character in a string
+test_str = "Hahaha"
+rem_char = "h"
+res = test_str.translate(None, rem_char) 
+print("The string after character deletion : " + str(res)) 
+
+
+# write a prorgram to delete all occurences of a character in a string
+test_str = "Hahaha"
+rem_char = "h"
+res = test_str.replace(rem_char, "")
+print("The string after character deletion : " + str(res)) 
