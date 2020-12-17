@@ -520,3 +520,52 @@ def dict_values_sum(dict):
 # write a program to compute the sum of all values in a dictionary
 aDict = {'a': 100, 'b':200, 'c':300}
 print("Sum of values :", sum(aDict.values()))
+
+
+# Write a Python program to find the list in a list of lists whose sum of elements is the highest
+num = [[1,2,3], [4,5,6], [10,11,12], [7,8,9,100]]
+print(max(num))
+print(f"Answer :{max(num, key=sum)}")
+
+
+# Write a Python program to remove duplicates from a list of lists.
+num = [[110, 120], [240], [330, 456, 425], [310, 220], [133], [240]]
+import itertools
+print("Original List", num)
+num.sort()
+new_num = list([num,list(_)] for num,_ in itertools.groupby(num))
+print("New List", new_num)
+
+
+# write a function to compute the nth Fibonacci number
+def Fibonacci(n): 
+    if n<0: 
+        print("Incorrect input") 
+    elif n==1: 
+        return 0
+    elif n==2: 
+        return 1
+    else: 
+        return Fibonacci(n-1)+Fibonacci(n-2) 
+
+
+# write a function to compute the nth Fibonacci number
+FibArray = [0,1] 
+def fibonacci(n): 
+    if n<0: 
+        print("Incorrect input") 
+    elif n<=len(FibArray): 
+        return FibArray[n-1] 
+    else: 
+        temp_fib = fibonacci(n-1)+fibonacci(n-2) 
+        FibArray.append(temp_fib) 
+        return temp_fib 
+
+
+# write a function to compute the nth Fibonacci number
+def fibonacci (n): 
+   arr = [0] * (n+1) 
+   arr[1] = 1
+   for i in range (2,n+1): 
+       arr[i] = arr[i-1] + arr[i-2] 
+   return arr[n] 
